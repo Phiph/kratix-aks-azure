@@ -1,0 +1,21 @@
+installFlux: true
+
+config:
+  path: "/destinations/dev/worker-1" # Path in StateStore. See https://kratix.io/docs/main/reference/destinations/intro
+  namespace: "default" # Namespace to create config
+  secretRef:
+    name: "labs-credentials" # Name of secret
+  git:
+    url: ${git_url}
+    branch: main
+
+additionalResources:
+- apiVersion: v1
+  kind: Secret
+  metadata:
+    name: labs-credentials
+    namespace: default
+  type: Opaque
+  data:
+    username: ${git_username}
+    password: ${git_password}

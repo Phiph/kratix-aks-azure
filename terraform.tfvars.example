@@ -1,0 +1,17 @@
+
+# Azure region to deploy into
+location = ""
+
+# Azure Subscription (ID) to use
+subscription_id = ""
+
+# The Azure VM instances type to use as "Agents" (aka Kubernetes Nodes) in AKS
+vm_size = "Standard_D2_v2"
+
+
+
+cluster_name = ""
+
+git_url = ""
+git_username = ""
+git_password = ""
